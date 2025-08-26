@@ -63,7 +63,7 @@ You should give references to the code you used from online/book resources and e
 #### Conclusion
 Give the conclusion and summary of your project. Did it solve the intended problem successfully?  What functionalities does your program have? What lessons have you learned from this assignment? Any comments about the project that you want to communicate to the instructor. 
 
-Your reports should contain sufficient details and are usually expected to be 3 to 5 pages long. **Particularly describe your debugging process and what you learned in this lab.** Your report will be graded according to its organization, content, and writing. To receive full credits for the report, it should satisfy the following:
+Your reports should contain sufficient details and are usually expected to be 3 to 5 pages long. **You should particularly describe your debugging process and what you learned in this lab.** Your report will be graded according to its organization, content, and writing. To receive full credits for the report, it should satisfy the following:
 1. Organization: Structure is logically clear and conforms to standards if required. Provides smooth transitions in between sections.
 2. Content: Provides all key technical components and details. Provides ample supporting details (such as figures, tables, analysis, etc.)
 3. Writing: Flow smoothly, effective in using strong topic sentences to start paragraphs, transitions to link sentences, a varied sentence structure, and logical connections between ideas. Demonstrates thorough proofreading. Defines all high-tech terms (acronyms or abbreviations); Uses highlighting techniques appropriately to emphasize main points to help information accessibility; clear cross-references.
@@ -107,5 +107,6 @@ If you use generative AI tools for your programming assignment, your submission 
   - What mistakes did it make?
   - What did you learn about debugging or the underlying concept by correcting the code?
   - How would you improve your prompt if you tried again?
+
 
 
