@@ -10,7 +10,7 @@
 #include <iostream>
 #include "readyqueue.h"
 #include "pcbtable.h"
-
+//40
 using namespace std;
 
 int main(int argc, char* argv[]) {
