@@ -1,7 +1,7 @@
 /**
  * Assignment 1: priority queue of processes
  * @file pcbtable.h
- * @author ??? (TODO: your name)
+ * @author Elias Estacion and Meliton Rojas
  * @brief This is the implementation file for the PCBTable class.
  * //You must complete the all parts marked as "TODO". Delete "TODO" after you are done.
  * // Remember to add sufficient comments to your code
@@ -14,8 +14,13 @@
  *
  * @param size: the capacity of the PCBTable
  */
-PCBTable::PCBTable(int size) {
-   // TODO: add your code here
+PCBTable::PCBTable(int size)
+   : pcbArray(nullptr), tableSize(size) {
+    if (tableSize < 1) tableSize = 1;
+    pcbArray = new PCB*[tableSize];
+    for (int i = 0; i < tableSize; ++i) {
+        pcbArray[i] = nullptr;
+    }
 }
 
 /**
@@ -23,8 +28,16 @@ PCBTable::PCBTable(int size) {
  *
  */
 PCBTable::~PCBTable() {
-   // TODO: add your code here
-   // Delete all the PCBs in the table
+   if (pcbArray) {
+
+    for (int i = 0; i < tableSize; ++i) {
+        delete pcbArray[i];
+        pcbArray[i] = nullptr;
+    }
+    delete[] pcbArray;
+    pcbArray = nullptr;
+   }
+   tableSize = 0;
 }
 
 /**
@@ -34,8 +47,10 @@ PCBTable::~PCBTable() {
  * @return PCB*: pointer to the PCB at index "idx"
  */
 PCB* PCBTable::getPCB(unsigned int idx) {
-    // TODO: add your code here
-    return NULL;
+    if (!pcbArray || idx >= static_cast<unsigned int>(tableSize)) {
+        return nullptr;
+    }
+    return pcbArray[idx];
 }
 
 /**
@@ -44,6 +59,12 @@ PCB* PCBTable::getPCB(unsigned int idx) {
  * @param pcb: the PCB to add
  */
 void PCBTable::addPCB(PCB *pcb, unsigned int idx) {
-    // TODO: add your code here
-    // Add a PCB pointer to the PCBTable at index idx.
+    if (!pcbArray || idx >= static_cast<unsigned int>(tableSize)) {
+        delete pcb;
+        return;
+    }
+
+    delete pcbArray[idx];
+
+    pcbArray[idx] = pcb;
 }
