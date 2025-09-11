@@ -26,8 +26,8 @@ private:
     int   capacity;   // current allocated capacity
 
     // Helpers
-    void siftUp(int idx);          // restore heap property upwards
-    void siftDown(int idx);        // restore heap property downwards
+    void shiftUp(int idx);          // restore heap property upwards
+    void shiftDown(int idx);        // restore heap property downwards
     void ensureCapacity();         // grow array when needed
     static int getPriority(const PCB* p); // extract priority from PCB
     static void swap(PCB*& a, PCB*& b);
