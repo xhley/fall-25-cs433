@@ -17,7 +17,7 @@
 PCBTable::PCBTable(int size)
    : pcbArray(nullptr), tableSize(size) {
     if (tableSize < 1) tableSize = 1;
-    pcbArray = new PCB*[tableSize];
+    pcbArray = new PCB*[tableSize + 1];
     for (int i = 0; i < tableSize; ++i) {
         pcbArray[i] = nullptr;
     }
@@ -47,7 +47,7 @@ PCBTable::~PCBTable() {
  * @return PCB*: pointer to the PCB at index "idx"
  */
 PCB* PCBTable::getPCB(unsigned int idx) {
-    if (!pcbArray || idx >= static_cast<unsigned int>(tableSize)) {
+    if (!pcbArray || idx == 0 || idx > static_cast<unsigned int>(tableSize)) {
         return nullptr;
     }
     return pcbArray[idx];
@@ -59,7 +59,7 @@ PCB* PCBTable::getPCB(unsigned int idx) {
  * @param pcb: the PCB to add
  */
 void PCBTable::addPCB(PCB *pcb, unsigned int idx) {
-    if (!pcbArray || idx >= static_cast<unsigned int>(tableSize)) {
+    if (!pcbArray || idx == 0 || idx > static_cast<unsigned int>(tableSize)) {
         delete pcb;
         return;
     }
