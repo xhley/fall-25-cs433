@@ -1,7 +1,7 @@
 /**
  * Assignment 1: priority queue of processes
  * @file pcb.h
- * @author ??? (TODO: your name)
+ * @author Ashley Flores
  * @brief This is the header file for the PCB class, a process control block.
  * @version 0.1
  */
@@ -62,4 +62,5 @@ public:
         cout << "Process " << id << ": " << name << " has priority " << priority << " and burst time "
              << burst_time << endl;
     }
+
 };
